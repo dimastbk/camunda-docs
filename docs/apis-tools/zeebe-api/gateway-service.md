@@ -309,6 +309,9 @@ message CreateProcessInstanceRequest {
    // the requestTimeout.
    // if requestTimeout = 0, uses the generic requestTimeout configured in the gateway.
    int64 requestTimeout = 2;
+   // list of names of variables to be included in `CreateProcessInstanceWithResultResponse.variables`
+   // if empty, all visible variables in the root scope will be returned.
+   repeated string fetchVariables = 3;
 }
 ```
 
